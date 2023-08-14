@@ -184,6 +184,13 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\PaymentController.cs" />
+    <Compile Include="Controllers\PaymentsDataController.cs" />
+    <Compile Include="Controllers\PortfoliosController.cs" />
+    <Compile Include="Controllers\PortfoliosDataController.cs" />
+    <Compile Include="Controllers\PropertiesDataController.cs" />
+    <Compile Include="Controllers\StocksController.cs" />
+    <Compile Include="Controllers\StocksDataController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -191,11 +198,13 @@
     <Compile Include="Models\ETF.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Payment.cs" />
     <Compile Include="Models\Player.cs" />
     <Compile Include="Models\Portfolio.cs" />
     <Compile Include="Models\Property.cs" />
     <Compile Include="Models\Stock.cs" />
     <Compile Include="Models\Transaction.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Models\ViewModels\DetailsPortfolio.cs" />
     <Compile Include="Models\ViewModels\DetailsStock.cs" />
     <Compile Include="Models\ViewModels\UpdateStock.cs" />
@@ -258,9 +267,21 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Stocks\List.cshtml" />
+    <Content Include="Views\Stocks\New.cshtml" />
+    <Content Include="Views\Stocks\Edit.cshtml" />
+    <Content Include="Views\Stocks\Error.cshtml" />
+    <Content Include="Views\Stocks\Details.cshtml" />
+    <Content Include="Views\Stocks\DetailsConfirm.cshtml" />
+    <Content Include="Views\Portfolios\New.cshtml" />
+    <Content Include="Views\Portfolios\List.cshtml" />
+    <Content Include="Views\Portfolios\Edit.cshtml" />
+    <Content Include="Views\Portfolios\Details.cshtml" />
+    <Content Include="Views\Portfolios\DeleteConfirm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Payment\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

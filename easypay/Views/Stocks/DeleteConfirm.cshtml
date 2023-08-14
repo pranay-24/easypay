@@ -1,0 +1,14 @@
+﻿﻿﻿@model easypay.Models.StockDto
+
+@{
+    ViewBag.Title = "DeleteConfirm";
+}
+
+<h2>Are you sure you want to delete this stock?</h2>
+<a href="/Stock/List">Cancel</a>
+<h2>@Model.StockName</h2>
+
+<form action="/Stock/Delete/@Model.StocksID" method="POST">
+    <input type="submit" value="Confirm Delete" />
+
+</form>

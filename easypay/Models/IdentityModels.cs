@@ -29,9 +29,23 @@ namespace easypay.Models
 
         public DbSet<Stock> Stocks { get; set; }
 
+        public DbSet<Property> Properties { get; set; }
+
+
+     public DbSet<Payment> Payments { get; set; }
+
+
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<easypay.Models.Transaction> Transactions { get; set; }
+
+        public System.Data.Entity.DbSet<easypay.Models.User> Users1 { get; set; }
+
+        // public System.Data.Entity.DbSet<easypay.Models.Property> Properties { get; set; }
+
+        // public System.Data.Entity.DbSet<easypay.Models.Player> Players { get; set; }
     }
 }

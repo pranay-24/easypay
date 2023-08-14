@@ -1,0 +1,22 @@
+﻿﻿﻿@model easypay.Models.PortfolioDto
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Update Portfolio</h2>
+<form action="/Portfolios/Update/@Model.PortfolioID" method="POST">
+    <div style="display:none;">
+        @* Pass through the Keeper ID *@
+        <input type="text" name="PortfolioID" value="@Model.PortfolioID" />
+    </div>
+    <div>
+        <label>Portfolio Name:</label> <input type="text" name="PortfolioName" value="@Model.PortfolioName" />
+    </div>
+
+
+    <div>
+        <input type="submit" value="Update Portfolio" />
+
+    </div>
+</form>

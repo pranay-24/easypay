@@ -1,0 +1,11 @@
+﻿﻿﻿@model IEnumerable<easypay.Models.PortfolioDto>
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List</h2>
+<a href="/Portfolios/New">New Portfolio</a>
+@foreach (var Portfolio in Model)
+{
+    <h2><a href="/Portfolios/Details/@Portfolio.PortfolioID">@Portfolio.PortfolioName  @Portfolio.Risk</a></h2>
+}

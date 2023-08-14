@@ -1,0 +1,29 @@
+﻿﻿
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create Stocks</h2>
+<form action="/Stocks/Create" method="POST">
+    <div>
+        <label>Name:</label> <input type="text" name="StockName" />
+    </div>
+    <div>
+        <label>Buy Price (CAD):</label> <input type="number" name="StockBuyPrice" />
+    </div>
+
+    <div>
+        <label>Sell Price  (CAD):</label> <input type="number" name="StockSellPrice" />
+
+    </div>
+
+    <div>
+        <label>Stock QTY :</label> <input type="number" name=" StockQty" />
+    </div>
+
+    <div>
+        <input type="submit" value="Add Stock" />
+
+    </div>
+</form>

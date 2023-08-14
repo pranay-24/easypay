@@ -1,0 +1,24 @@
+﻿﻿﻿@model easypay.Models.ViewModels.UpdateStock
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Update Animal</h2>
+<form action="/Stocks/Update/@Model.SelectedStock.StocksID" method="POST">
+    <div style="display:none;">
+        @* Pass through the animal ID *@
+        <input type="text" name="AnimalID" value="@Model.SelectedStock.StocksID" />
+    </div>
+    <div>
+        <label>Name:</label> <input type="text" name="StockName" value="@Model.SelectedStock.StockName" />
+    </div>
+    <div>
+        <label>Weight (kg):</label> <input type="number" name="StockBuyPrice" value="@Model.SelectedStock.StockBuyPrice" />
+    </div>
+
+    <div>
+        <input type="submit" value="Update Stock" />
+
+    </div>
+</form>

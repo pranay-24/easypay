@@ -1,0 +1,24 @@
+﻿﻿﻿@model easypay.Models.ViewModels.DetailsPortfolio
+
+
+@{
+    ViewBag.Title = "View";
+}
+
+<a href="/Portfolio/List">Go back to list</a>
+<br />
+<a href="/Portfolio/Edit/@Model.SelectedPortfolio.PortfolioID">Update</a>
+<br />
+<a style="color:#ab2020;" href="/Portfolios/DeleteConfirm/@Model.SelectedPortfolio.PortfolioID">Delete</a>
+<h2>@Model.SelectedPortfolio.PortfolioName </h2>
+
+
+
+<div>
+    <h3>Responsible for:</h3>
+    @foreach (var Stock in Model.PartStocks)
+    {
+        <a href="/Stocks/Details/@Stock.StocksID">@Stock.StockName</a><br />
+
+    }
+</div>

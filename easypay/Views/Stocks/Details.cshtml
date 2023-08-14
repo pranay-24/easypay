@@ -1,0 +1,35 @@
+﻿﻿﻿@model easypay.Models.ViewModels.DetailsStock
+@{
+    ViewBag.Title = "View";
+}
+
+<a href="/Stocks/List">Go back to list</a>
+<br />
+<a href="/Stocks/Edit/@Model.SelectedStock.StocksID">Update</a>
+<br />
+<a style="color:#ab2020;" href="/Stocks/DeleteConfirm/@Model.SelectedStock.StocksID">Delete</a>
+<h2>@Model.SelectedStock.StockName</h2>
+
+
+<div>
+    <h2>Portfolios in which @Model.SelectedStock.StockName is part :</h2>
+    @foreach (var portfolio in Model.Portfolios)
+    {
+
+        <a href="/Portfolios/Details/@portfolio.PortfolioID">@portfolio.PortfolioName </a> <a style="color:#ab2020;" href="/Stock/Unassociate/@Model.SelectedStock.StocksID?PortfolioID=@portfolio.PortfolioID">[x]</a><br />
+    }
+
+    <div>
+        <h4>Add @Model.SelectedStock.StockName to new portfolio  </h4>
+        <form method="POST" action="/Stock/Associate/@Model.SelectedStock.StocksID">
+            <select name="PortfolioID">
+                @foreach (var portfolio in Model.Portfolios)
+                {
+                    <option value="@portfolio.PortfolioID">@portfolio.PortfolioName </option>
+                }
+
+            </select>
+            <input type="submit" value="Associate Keeper" />
+        </form>
+    </div>
+</div>

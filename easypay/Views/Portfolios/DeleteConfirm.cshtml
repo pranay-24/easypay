@@ -1,0 +1,12 @@
+﻿﻿﻿@model easypay.Models.PortfolioDto
+
+@{
+    ViewBag.Title = "DeleteConfirm";
+}
+
+<h2>Are you sure you want to delete this Portfolio?</h2>
+<a href="/Portfolios/List">Cancel</a>
+<h3>Name: @Model.PortfolioName </h3>
+<form action="/Portfolio/Delete/@Model.PortfolioID" method="POST">
+    <input type="submit" value="Confirm Delete" />
+</form>

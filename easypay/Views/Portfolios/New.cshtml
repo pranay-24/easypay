@@ -1,0 +1,21 @@
+﻿﻿﻿
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create Portfolio</h2>
+<form action="/Portfolios/Create" method="POST">
+    <div>
+        <label>Portfolio Name</label> <input type="text" name="PortfolioName" />
+    </div>
+
+    <div>
+        <label>Portfolio Risk</label> <input type="text" name="Risk" />
+    </div>
+
+    <div>
+        <input type="submit" value="Create Portfolio" />
+
+    </div>
+</form>

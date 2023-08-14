@@ -12,7 +12,7 @@ namespace easypay.Models
         public int TransactionID { get; set; }
 
         public string TransactionType { get; set; }
-
+        public string Description { get; set; }
         public string TransactionRemarks { get; set; }
 
         //transcation table can keep track of all the transactions

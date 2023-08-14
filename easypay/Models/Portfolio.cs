@@ -15,7 +15,7 @@ namespace easypay.Models
         public string Risk { get; set; }
 
         public ICollection<Stock> Stocks { get; set; }
-        public ICollection<ETF> ETFs { get; set; }
+        //public ICollection<ETF> ETFs { get; set; }
 
 
     }
